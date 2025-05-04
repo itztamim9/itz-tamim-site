@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Itz Tamim - Design Studio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #fff3e0);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #3f51b5, #2196f3);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px; color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #3f51b5;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #3f51b5; color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #3f51b5;
+      color: white;
+    }
+    a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+    img.profile {
+      width: 200px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    #successMessage {
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎨 Itz Tamim's Design Studio</h1>
+  <p>Creative | Fast | Affordable</p>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h2>🙋‍♂️ About Me</h2>
+  <img src="tamim.jpg" alt="Itz Tamim" class="profile">
+  <p>Hi! I'm Tamim. I design professional thumbnails, logos & banners with love and care.</p>
+</section>
+
+<section id="services">
+  <h2>💼 My Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>📸 YouTube Thumbnail</h3>
+      <p>Price: <strong>৳80</strong> per piece</p>
+    </div>
+    <div class="card">
+      <h3>🎯 Logo Design</h3>
+      <p>Price: <strong>৳50</strong></p>
+    </div>
+    <div class="card">
+      <h3>📺 YouTube Banner</h3>
+      <p>Price: <strong>৳70</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>🖼️ Portfolio</h2>
+  <div class="portfolio">
+    <div class="card"><p>Thumbnail Sample 1</p></div>
+    <div class="card"><p>Logo Sample 1</p></div>
+    <div class="card"><p>Banner Sample 1</p></div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>🛒 Place Your Order</h2>
+  <form id="orderForm" action="https://formsubmit.co/itzmetamim3056@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <select name="service" required>
+      <option value="">Select Service</option>
+      <option>Thumbnail</option>
+      <option>Logo</option>
+      <option>Banner</option>
+    </select>
+    <textarea name="details" placeholder="Describe your order..." required></textarea>
+    <button type="submit">Submit Order</button>
+  </form>
+  <p id="successMessage">✔️ Order submitted successfully!</p>
+  <p><strong>Payment Method:</strong> 📱 bKash: <b>01965613742</b></p>
+</section>
+
+<section id="contact">
+  <h2>📞 Contact Me</h2>
+  <p><strong>Name:</strong> Itz Tamim</p>
+  <p><strong>Email:</strong> itzmetamim3056@gmail.com</p>
+  <p><strong>Telegram:</strong> <a href="https://t.me/ItzTamim9" target="_blank">t.me/ItzTamim9</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Itz Tamim | Crafted with passion & pixels ✨</p>
+</footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(){
+  setTimeout(function(){
+    document.getElementById("successMessage").style.display = "block";
+  }, 1000);
+});
+</script>
+
+</body>
+</html>
